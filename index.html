@@ -617,12 +617,10 @@
                 </p>
             </div>
         </div>
+        <!--
         <div class="row" style="margin-bottom: 0px;">
             <div class="col-4 compare-title  compare-title-sm">
                 <p>Input Trajectory</p>
-            </div>
-            <div class="col-4 compare-title  compare-title-sm">
-                <p>Mid 2-3 (Our choice)</p>
             </div>
         </div>
         <div class="row captioned_videos">
@@ -637,8 +635,46 @@
                 </div>
             </div>
         </div>
+        -->
 
         <div class="row" style="margin-bottom: 0px;">
+            <div class="col-3 compare-title  compare-title-sm">
+                <p>Input Trajectory</p>
+            </div>
+            <div class="col-3 compare-title  compare-title-sm">
+                <p>Bottom 2</p>
+            </div>
+            <div class="col-3 compare-title  compare-title-sm">
+                <p>Mid 2</p>
+            </div>
+            <div class="col-3 compare-title">
+                <p>Top 1</p>
+            </div>
+        </div>
+        <div class="row captioned_videos">
+            <div class="col-3">
+                <div class="video-compare-container" style="width: 100%">
+                    <img src="data/videos/qual/130.jpg" width="100%" height="100%">
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="0" loop playsinline autoPlay muted src="data/videos/ablation/layer/selfqkv2up11/130.webm" onplay="resizeAndPlay(this)"></video>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="0" loop playsinline autoPlay muted src="data/videos/ablation/layer/selfqkv2up21/130.webm" onplay="resizeAndPlay(this)"></video>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="0" loop playsinline autoPlay muted src="data/videos/ablation/layer/selfqkv2up30/130.webm" onplay="resizeAndPlay(this)"></video>
+                </div>
+            </div>
+        </div>
+
+        <!--<div class="row" style="margin-bottom: 0px;">
             <div class="col-4 compare-title  compare-title-sm">
                 <p>Bottom 1</p>
             </div>
@@ -723,7 +759,7 @@
                     <video class="video lazy" id="0" loop playsinline autoPlay muted src="data/videos/ablation/layer/selfqkv2up32/130.webm" onplay="resizeAndPlay(this)"></video>
                 </div>
             </div>
-        </div>
+        </div>-->
 
 
         <div class="col-sm-4 my-auto center" style="margin-left:auto; margin-right: auto;">
@@ -756,12 +792,16 @@
                 </p>
             </div>
         </div>
+
         <div class="row" style="margin-bottom: 0px;">
             <div class="col-4 compare-title  compare-title-sm">
                 <p>Input Trajectory</p>
             </div>
+            <div class="col-4 compare-title">
+                <p>Timestep 50</p>
+            </div>
             <div class="col-4 compare-title  compare-title-sm">
-                <p>Timestep [30, 45] (Our choice)</p>
+                <p>Timestep 40</p>
             </div>
         </div>
         <div class="row captioned_videos">
@@ -772,31 +812,7 @@
             </div>
             <div class="col-4">
                 <div class="video-compare-container" style="width: 100%">
-                    <video class="video lazy" id="0" loop playsinline autoPlay muted src="data/videos/ablation/timestep/car5/30to45.webm" onplay="resizeAndPlay(this)"></video>
-                </div>
-            </div>
-        </div>
-
-        <div class="row" style="margin-bottom: 0px;">
-            <div class="col-4 compare-title">
-                <p>Timestep 50</p>
-            </div>
-            <div class="col-4 compare-title  compare-title-sm">
-                <p>Timestep 45</p>
-            </div>
-            <div class="col-4 compare-title  compare-title-sm">
-                <p>Timestep 40</p>
-            </div>
-        </div>
-        <div class="row captioned_videos">
-            <div class="col-4">
-                <div class="video-compare-container" style="width: 100%">
                     <video class="video lazy" id="0" loop playsinline autoPlay muted src="data/videos/ablation/timestep/car5/50.webm" onplay="resizeAndPlay(this)"></video>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="video-compare-container" style="width: 100%">
-                    <video class="video lazy" id="0" loop playsinline autoPlay muted src="data/videos/ablation/timestep/car5/45.webm" onplay="resizeAndPlay(this)"></video>
                 </div>
             </div>
             <div class="col-4">
@@ -809,60 +825,36 @@
 
         <div class="row" style="margin-bottom: 0px;">
             <div class="col-4 compare-title">
-                <p>Timestep 35</p>
-            </div>
-            <div class="col-4 compare-title  compare-title-sm">
                 <p>Timestep 30</p>
             </div>
             <div class="col-4 compare-title  compare-title-sm">
-                <p>Timestep 25</p>
-            </div>
-        </div>
-        <div class="row captioned_videos">
-            <div class="col-4">
-                <div class="video-compare-container" style="width: 100%">
-                    <video class="video lazy" id="0" loop playsinline autoPlay muted src="data/videos/ablation/timestep/car5/35.webm" onplay="resizeAndPlay(this)"></video>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="video-compare-container" style="width: 100%">
-                    <video class="video lazy" id="1" loop playsinline autoPlay muted src="data/videos/ablation/timestep/car5/30.webm" onplay="resizeAndPlay(this)"></video>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="video-compare-container" style="width: 100%">
-                    <video class="video lazy" id="0" loop playsinline autoPlay muted src="data/videos/ablation/timestep/car5/25.webm" onplay="resizeAndPlay(this)"></video>
-                </div>
-            </div>
-        </div>
-
-        <div class="row" style="margin-bottom: 0px;">
-            <div class="col-4 compare-title">
                 <p>Timestep 20</p>
             </div>
             <div class="col-4 compare-title  compare-title-sm">
                 <p>Timestep 10</p>
             </div>
-            <div class="col-4 compare-title  compare-title-sm">
-                <p>Timestep 1</p>
-            </div>
         </div>
         <div class="row captioned_videos">
             <div class="col-4">
                 <div class="video-compare-container" style="width: 100%">
-                    <video class="video lazy" id="0" loop playsinline autoPlay muted src="data/videos/ablation/timestep/car5/20.webm" onplay="resizeAndPlay(this)"></video>
+                    <video class="video lazy" id="0" loop playsinline autoPlay muted src="data/videos/ablation/timestep/car5/30.webm" onplay="resizeAndPlay(this)"></video>
                 </div>
             </div>
             <div class="col-4">
                 <div class="video-compare-container" style="width: 100%">
-                    <video class="video lazy" id="0" loop playsinline autoPlay muted src="data/videos/ablation/timestep/car5/10.webm" onplay="resizeAndPlay(this)"></video>
+                    <video class="video lazy" id="1" loop playsinline autoPlay muted src="data/videos/ablation/timestep/car5/20.webm" onplay="resizeAndPlay(this)"></video>
                 </div>
             </div>
             <div class="col-4">
                 <div class="video-compare-container" style="width: 100%">
-                    <video class="video lazy" id="0" loop playsinline autoPlay muted src="data/videos/ablation/timestep/car5/1.webm" onplay="resizeAndPlay(this)"></video>
+                    <video class="video lazy" id="1" loop playsinline autoPlay muted src="data/videos/ablation/timestep/car5/10.webm" onplay="resizeAndPlay(this)"></video>
                 </div>
             </div>
+        </div>
+        <div class="col-sm-4 my-auto center" style="margin-left:auto; margin-right: auto;">
+            <a href="gallery_timestep.html" class="btn btn-primary btn-lg btn-search">
+                More Results
+            </a>
         </div>
     </div>
 
