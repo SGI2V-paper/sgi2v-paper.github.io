@@ -466,30 +466,38 @@
             </div>
         </div>
         <div class="row" style="margin-bottom: 0px;">
-            <div class="col-4 compare-title  compare-title-sm">
+            <div class="col-3 compare-title  compare-title-sm">
                 <p>Input Trajectory</p>
             </div>
-            <div class="col-4 compare-title  compare-title-sm">
+            <div class="col-3 compare-title  compare-title-sm">
                 <p>Modified self-attn out <br> (Our choice)</p>
             </div>
-            <div class="col-4 compare-title">
+            <div class="col-3 compare-title">
                 <p>Self-attn out</p>
+            </div>
+            <div class="col-3 compare-title">
+                <p>Upsample block out</p>
             </div>
         </div>
         <div class="row captioned_videos">
-            <div class="col-4">
+            <div class="col-3">
                 <div class="video-compare-container" style="width: 100%">
                     <img src="data/videos/qual/21.jpg" width="100%" height="100%">
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-3">
                 <div class="video-compare-container" style="width: 100%">
                     <video class="video lazy" id="0" loop playsinline autoPlay muted src="data/videos/qual/21.webm" onplay="resizeAndPlay(this)"></video>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-3">
                 <div class="video-compare-container" style="width: 100%">
                     <video class="video lazy" id="0" loop playsinline autoPlay muted src="data/videos/ablation/layer/selfqkv/21.webm" onplay="resizeAndPlay(this)"></video>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="0" loop playsinline autoPlay muted src="data/videos/ablation/layer/upaf/21.webm" onplay="resizeAndPlay(this)"></video>
                 </div>
             </div>
         </div>
