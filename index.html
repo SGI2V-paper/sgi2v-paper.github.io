@@ -96,7 +96,7 @@
                     To control trajectories of scene elements during the denoising process, we optimize latent $z_t$ at specific timesteps $t$ as follows:<br>
                     <b>(1)</b> We extract semantically aligned feature maps from the denoising U-Net, where regions belonging to the same objects across frames have similar feature vectors.<br>
                     <b>(2)</b> We optimize the latent $z_t^*$ with a loss that encourages cross-frame feature similarity along the input trajectory.<br>
-                    <b>(3)</b> To keep the visual quality of the generated video, a frequency-based post-processing method is applied to retain high-frequency noise of the original latent $z_t$. The updated latent $\tilde{z}_t$ is input to the next denoising step.
+                    <b>(3)</b> To preserve the visual quality of the generated video, a frequency-based post-processing method is applied to retain high-frequency noise of the original latent $z_t$. The updated latent $\tilde{z}_t$ is input to the next denoising step.
                 </p>
                 <img src="overview.jpg" alt="architecture" style="width: 100%">
             </div>
@@ -280,7 +280,7 @@
         <div class="row captioned_videos">
             <div class="col-md-12">
                 <p>
-                    While our method is tuning-free (i.e. not finetuned on annotated data), it demonstrates competitive performance with supervised baselines in both visual and motion quality.
+                    While our method is tuning-free (i.e. not finetuned on annotated data), it demonstrates competitive performance with supervised baselines in visual and motion quality.
                 </p>
             </div>
         </div>
@@ -352,7 +352,7 @@
         </div>
             <div class="row">
                     <div class="col-sm-12">
-                        <h5 id="ablation-unet-featuremap"><b>PCA Visualization of diffusion features at timestep = 30/50 (Paper Fig. 2)</b></h5>
+                        <h5 id="ablation-unet-featuremap-PCA"><b>PCA Visualization of diffusion features at timestep = 30/50 (Paper Fig. 2)</b></h5>
                     </div>
             </div>
             <div class="row" style="margin-bottom: 0px;">
@@ -561,7 +561,7 @@
     <div class="container" style="max-width: 768px;">
         <div class="row">
             <div class="col-sm-12">
-                <h2 id="ablation-post-processing">Ablation Study:  Frequency Post-processing (Paper Fig. 7)</h2>
+                <h2 id="ablation-post-processing">Ablation Study: High-Frequency Preservation in Post-Processing (Paper Fig. 7)</h2>
             </div>
         </div>
         <div class="row captioned_videos">
