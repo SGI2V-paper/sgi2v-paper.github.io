@@ -18,10 +18,23 @@
     <link rel="icon" type="image/png" sizes="32x32" href="data/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="data/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
+
     <meta name="robots" content="noindex">
 
+    <!-- MathJax -->
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            processEscapes: true
+          }
+        });
+    </script>
 
-
+    <script
+        type="text/javascript"
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    ></script>
 </head>
 
 <body>
@@ -34,29 +47,22 @@
                 <a href="">
                     Anonymous Author 3365<sup></sup>
                 </a>
+                <br>
             </div>
-            <!--<div class="container" style="max-width: 1024px; margin-bottom: 20px">
-                <h1 class="text-center" style="font-size:22px;">ICLR 2025</h1>
-            </div>-->
         </div>
         <div id="container">
         <div class="buttons" style="margin-top: 8px; margin-bottom: 8px;">
-            <a class="btn btn-light" role="button" href="index.html">
-                <svg style="visibility:hidden;width:0px;height:24px;margin-left:-12px;margin-right:12px" width="0px" height="24px" viewBox="0 0 375 531">
-                    <polygon stroke="#000000" points="0.5,0.866 459.5,265.87 0.5,530.874 "></polygon>
-                </svg>
-                Project
-            </a>
         </div>
         </div>
     </div>
+    
     <hr class="divider" />
     
 
     <div class="container" style="max-width: 768px;">
         <div class="row">
             <div class="col-sm-12">
-                <h2>Ablation on U-Net feature maps (Paper Fig. 5)</h2>
+                <h2>Ablation on U-Net feature maps (Paper Fig. 13)</h2>
             </div>
         </div>
         <div class="row" style="margin-bottom: 0px;">

@@ -55,14 +55,20 @@
         </div>
         </div>
     </div>
-    <!--<hr class="divider" />
+    <hr class="divider" />
     <div class="container" style="max-width: 768px;">
-        <div class="compositional captioned_videos">
-            <video class="video lazy" autoplay loop playsinline muted>
-                <source data-src="data/videos/teaser.mp4" type="video/mp4"></source>
-            </video>
+        <video class="video lazy" autoplay="" loop="" playsinline="" muted="">
+            <source data-src="data/sgi2v720px4.mp4" type="video/mp4" src="data/sgi2v720px4.mp4">
+        </video>
+        <div class="row captioned_videos">
+            <div class="col-md-12">
+                <p>
+                    TL;DR: Given a set of bounding boxes with associated trajectories, we achieve object and camera motion control in image-to-video generation by leveraging the knowledge present in a pre-trained image-to-video diffusion model. 
+                    Our method is self-guided, offering zero-shot trajectory control without fine-tuning or relying on external knowledge.
+                </p>
+            </div>
         </div>
-    </div>-->
+    </div>
     <hr class="divider" />
     <div class="container" style="max-width: 768px;">
         <div class="row">
@@ -74,10 +80,11 @@
                 </div>
                 <p>
                     Methods for image-to-video generation have achieved impressive, photo-realistic quality. 
-                    However, adjusting specific elements in generated videos, such as object motion or camera movement, is often a tedious process of trial and error, e.g.,
-                    involving re-generating videos with different random seeds. Recent techniques address this issue by fine-tuning a pre-trained model to follow conditioning signals, such as bounding boxes or point trajectories. Yet, this fine-tuning procedure
-                    can be computationally expensive, and it requires datasets with annotated object motion, which can be difficult to procure. Here, we propose SG-I2V, a framework for controllable image-to-video generation that is self-guided—i.e., offering zero-shot control using a pre-trained image-to-video diffusion model without 
-                    fine-tuning or external guidance. Our zero-shot method outperforms unsupervised baselines while being competitive with supervised models in terms of visual quality and motion fidelity. 
+However, adjusting specific elements in generated videos, such as object motion or camera movement, is often a tedious process of trial and error, e.g., involving re-generating videos with different random seeds. 
+Recent techniques address this issue by fine-tuning a pre-trained model to follow conditioning signals, such as bounding boxes or point trajectories. 
+Yet, this fine-tuning procedure can be computationally expensive, and it requires datasets with annotated object motion, which can be difficult to procure. 
+In this work, we introduce SG-I2V, a framework for controllable image-to-video generation that is self-guided&mdash;offering zero-shot control by relying solely on the knowledge present in a pre-trained image-to-video diffusion model without the need for fine-tuning or external knowledge. 
+Our zero-shot method outperforms unsupervised baselines while being competitive with supervised models in terms of visual quality and motion fidelity.
                 </p>
             </div>
         </div>
@@ -92,7 +99,7 @@
         <div class="row captioned_videos">
             <div class="col-md-12">
                 <p>
-                    In this work, the motion of generated videos is controlled by specifying the bounding boxes and associated trajectories.<br><br>
+                    In this work, we control the motion in generated videos by specifying bounding boxes and their associated trajectories. Our framework is built on Stable Video Diffusion, a publicly available image-to-video diffusion model.<br><br>
                     To control trajectories of scene elements during the denoising process, we optimize latent $z_t$ at specific timesteps $t$ as follows:<br>
                     <b>(1)</b> We extract semantically aligned feature maps from the denoising U-Net, where regions belonging to the same objects across frames have similar feature vectors.<br>
                     <b>(2)</b> We optimize the latent $z_t^*$ with a loss that encourages cross-frame feature similarity along the input trajectory.<br>
@@ -112,47 +119,12 @@
         <div class="row captioned_videos">
             <div class="col-4">
                 <div class="video-compare-container" style="width: 100%">
-                    <img src="data/videos/qual/145.jpg" width="100%" height="100%">
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="video-compare-container" style="width: 100%">
                     <img src="data/videos/qual/110.jpg" width="100%" height="100%">
                 </div>
             </div>
             <div class="col-4">
                 <div class="video-compare-container" style="width: 100%">
-                    <img src="data/videos/qual/19.jpg" width="100%" height="100%">
-                </div>
-            </div>
-        </div>
-        <div class="row captioned_videos">
-            <div class="col-4">
-                <div class="video-compare-container" style="width: 100%">
-                    <video class="video lazy" id="0" loop playsinline autoPlay muted src="data/videos/qual/145.webm" onplay="resizeAndPlay(this)"></video>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="video-compare-container" style="width: 100%">
-                    <video class="video lazy" id="1" loop playsinline autoPlay muted src="data/videos/qual/110.webm" onplay="resizeAndPlay(this)"></video>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="video-compare-container" style="width: 100%">
-                    <video class="video lazy" id="2" loop playsinline autoPlay muted src="data/videos/qual/19.webm" onplay="resizeAndPlay(this)"></video>
-                </div>
-            </div>
-        </div>
-
-        <div class="row captioned_videos">
-            <div class="col-4">
-                <div class="video-compare-container" style="width: 100%">
                     <img src="data/videos/qual/61.jpg" width="100%" height="100%">
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="video-compare-container" style="width: 100%">
-                    <img src="data/videos/qual/38.jpg" width="100%" height="100%">
                 </div>
             </div>
             <div class="col-4">
@@ -164,12 +136,12 @@
         <div class="row captioned_videos">
             <div class="col-4">
                 <div class="video-compare-container" style="width: 100%">
-                    <video class="video lazy" id="0" loop playsinline autoPlay muted src="data/videos/qual/61.webm" onplay="resizeAndPlay(this)"></video>
+                    <video class="video lazy" id="0" loop playsinline autoPlay muted src="data/videos/qual/110.webm" onplay="resizeAndPlay(this)"></video>
                 </div>
             </div>
             <div class="col-4">
                 <div class="video-compare-container" style="width: 100%">
-                    <video class="video lazy" id="1" loop playsinline autoPlay muted src="data/videos/qual/38.webm" onplay="resizeAndPlay(this)"></video>
+                    <video class="video lazy" id="1" loop playsinline autoPlay muted src="data/videos/qual/61.webm" onplay="resizeAndPlay(this)"></video>
                 </div>
             </div>
             <div class="col-4">
@@ -178,7 +150,6 @@
                 </div>
             </div>
         </div>
-        
         <div class="col-sm-4 my-auto center" style="margin-left:auto; margin-right: auto;">
             <a href="gallery_obj.html" class="btn btn-primary btn-lg btn-search">
                 More Results
@@ -196,69 +167,34 @@
         <div class="row captioned_videos">
             <div class="col-4">
                 <div class="video-compare-container" style="width: 100%">
-                    <img src="data/videos/qual/130.jpg" width="100%" height="100%">
+                    <img src="data/videos/qual/198.jpg" width="100%" height="100%">
                 </div>
             </div>
             <div class="col-4">
                 <div class="video-compare-container" style="width: 100%">
-                    <img src="data/videos/qual/154.jpg" width="100%" height="100%">
+                    <img src="data/videos/qual/174.jpg" width="100%" height="100%">
                 </div>
             </div>
             <div class="col-4">
                 <div class="video-compare-container" style="width: 100%">
-                    <img src="data/videos/qual/87.jpg" width="100%" height="100%">
-                </div>
-            </div>
-        </div>
-        <div class="row captioned_videos">
-            <div class="col-4">
-                <div class="video-compare-container" style="width: 100%">
-                    <video class="video lazy" id="0" loop playsinline autoPlay muted src="data/videos/qual/130.webm" onplay="resizeAndPlay(this)"></video>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="video-compare-container" style="width: 100%">
-                    <video class="video lazy" id="1" loop playsinline autoPlay muted src="data/videos/qual/154.webm" onplay="resizeAndPlay(this)"></video>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="video-compare-container" style="width: 100%">
-                    <video class="video lazy" id="2" loop playsinline autoPlay muted src="data/videos/qual/87.webm" onplay="resizeAndPlay(this)"></video>
-                </div>
-            </div>
-        </div>
-
-        <div class="row captioned_videos">
-            <div class="col-4">
-                <div class="video-compare-container" style="width: 100%">
-                    <img src="data/videos/qual/176.jpg" width="100%" height="100%">
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="video-compare-container" style="width: 100%">
-                    <img src="data/videos/qual/139.jpg" width="100%" height="100%">
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="video-compare-container" style="width: 100%">
-                    <img src="data/videos/qual/127.jpg" width="100%" height="100%">
+                    <img src="data/videos/qual/136.jpg" width="100%" height="100%">
                 </div>
             </div>
         </div>
         <div class="row captioned_videos">
             <div class="col-4">
                 <div class="video-compare-container" style="width: 100%">
-                    <video class="video lazy" id="0" loop playsinline autoPlay muted src="data/videos/qual/176.webm" onplay="resizeAndPlay(this)"></video>
+                    <video class="video lazy" id="0" loop playsinline autoPlay muted src="data/videos/qual/198.webm" onplay="resizeAndPlay(this)"></video>
                 </div>
             </div>
             <div class="col-4">
                 <div class="video-compare-container" style="width: 100%">
-                    <video class="video lazy" id="1" loop playsinline autoPlay muted src="data/videos/qual/139.webm" onplay="resizeAndPlay(this)"></video>
+                    <video class="video lazy" id="1" loop playsinline autoPlay muted src="data/videos/qual/174.webm" onplay="resizeAndPlay(this)"></video>
                 </div>
             </div>
             <div class="col-4">
                 <div class="video-compare-container" style="width: 100%">
-                    <video class="video lazy" id="2" loop playsinline autoPlay muted src="data/videos/qual/127.webm" onplay="resizeAndPlay(this)"></video>
+                    <video class="video lazy" id="2" loop playsinline autoPlay muted src="data/videos/qual/136.webm" onplay="resizeAndPlay(this)"></video>
                 </div>
             </div>
         </div>
@@ -269,18 +205,64 @@
             </a>
         </div>
     </div>
-
     <hr class="divider" />
     <div class="container" style="max-width: 768px;">
         <div class="row">
             <div class="col-sm-12">
-                <h2 id="baseline-comparison">Qualitative Results: Comparison with Supervised Baselines</h2>
+                <h2 id="obj-motion-results">Qualitative Results: VIPSeg dataset</h2>
+            </div>
+        </div>
+        <div class="row captioned_videos">
+            <div class="col-4">
+                <div class="video-compare-container" style="width: 100%">
+                    <img src="data/videos/VIPSeg/101.jpg" width="100%" height="100%">
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="video-compare-container" style="width: 100%">
+                    <img src="data/videos/VIPSeg/287.jpg" width="100%" height="100%">
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="video-compare-container" style="width: 100%">
+                    <img src="data/videos/VIPSeg/2250.jpg" width="100%" height="100%">
+                </div>
+            </div>
+        </div>
+        <div class="row captioned_videos">
+            <div class="col-4">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="0" loop playsinline autoPlay muted src="data/videos/VIPSeg/101.webm" onplay="resizeAndPlay(this)"></video>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="1" loop playsinline autoPlay muted src="data/videos/VIPSeg/287.webm" onplay="resizeAndPlay(this)"></video>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="2" loop playsinline autoPlay muted src="data/videos/VIPSeg/2250.webm" onplay="resizeAndPlay(this)"></video>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 my-auto center" style="margin-left:auto; margin-right: auto;">
+            <a href="gallery_VIPSeg.html" class="btn btn-primary btn-lg btn-search">
+                More Results
+            </a>
+        </div>
+    </div>
+    <hr class="divider" />
+    <div class="container" style="max-width: 768px;">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 id="baseline-comparison">Qualitative Results: Comparison with Supervised Baselines (Paper Fig. 4)</h2>
             </div>
         </div>
         <div class="row captioned_videos">
             <div class="col-md-12">
                 <p>
-                    While our method is tuning-free (i.e. not finetuned on annotated data), it demonstrates competitive performance with supervised baselines in visual and motion quality.
+                    While our method is tuning-free (i.e. no fine-tuning on annotated data), it demonstrates competitive performance with supervised baselines in visual and motion quality.
                 </p>
             </div>
         </div>
@@ -320,18 +302,26 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-4 my-auto center" style="margin-left:auto; margin-right: auto;">
-            <a href="gallery_baseline.html" class="btn btn-primary btn-lg btn-search">
-                More Results 1/2
-            </a>
+        <div class="row" style="margin-bottom: 0px;">
+            <div class="col-sm-4 my-auto center" style="margin-left:auto; margin-right: auto;">
+                <a href="gallery_baseline.html" class="btn btn-primary btn-lg btn-search">
+                    More Comparison 1/2
+                </a>
+            </div>
+            <div class="col-sm-4 my-auto center" style="margin-left:auto; margin-right: auto;">
+                <a href="gallery_baseline2.html" class="btn btn-primary btn-lg btn-search">
+                    More Comparison 2/2
+                </a>
+            </div>
         </div>
         <br>
-        <div class="col-sm-4 my-auto center" style="margin-left:auto; margin-right: auto;">
-            <a href="gallery_baseline2.html" class="btn btn-primary btn-lg btn-search">
-                More Results 2/2
-            </a>
+        <div class="row captioned_videos">
+            <div class="col-md-12">
+                <p>
+                    Additionally, you can find qualitative comparioson on zero-shot baselines <a href="gallery_zero.html">here</a>. 
+                </p>
+            </div>
         </div>
-
     </div>
 
     <hr class="divider" />
@@ -413,46 +403,6 @@
                         </div>
                     </div>
             </div>
-            <!--<div class="row captioned_videos">
-                <div class="col-3">
-                    <div class="video-compare-container" style="width: 100%">
-                        <video class="video lazy" id="0" loop playsinline autoPlay muted src="data/videos/PCA/37/generated.webm" onplay="resizeAndPlay(this)"></video>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="video-compare-container" style="width: 100%">
-                        <video class="video lazy" id="0" loop playsinline autoPlay muted src="data/videos/PCA/37/upafup22_30/video.webm" onplay="resizeAndPlay(this)"></video>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="video-compare-container" style="width: 100%">
-                        <video class="video lazy" id="0" loop playsinline autoPlay muted src="data/videos/PCA/37/selfqkvup22_30/video.webm" onplay="resizeAndPlay(this)"></video>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="video-compare-container" style="width: 100%">
-                        <video class="video lazy" id="0" loop playsinline autoPlay muted src="data/videos/PCA/37/selfqkv2up22_30/video.webm" onplay="resizeAndPlay(this)"></video>
-                    </div>
-                </div>
-            </div>-->
-            <!--<div class="row">
-                <div class="col-sm-12">
-                    <h5 id="ablation-unet-featuremap"><b>PCA visualization of Original self-attention, layer: Mid 2, timestep: 50, 40, 30 (row 1, 2, 3)</b></h5>
-                </div>
-            </div>
-            <div class="row captioned_videos">
-                    <div class="col-md-12">
-                        <div class="video-compare-container" style="width: 100%">
-                            <img src="data/videos/PCA/37/selfqkv2up22_50/all.png" width="100%" height="100%">
-                        </div>
-                        <div class="video-compare-container" style="width: 100%">
-                            <img src="data/videos/PCA/37/selfqkv2up22_40/all.png" width="100%" height="100%">
-                        </div>
-                        <div class="video-compare-container" style="width: 100%">
-                            <img src="data/videos/PCA/37/selfqkv2up22_30/all.png" width="100%" height="100%">
-                        </div>
-                    </div>
-            </div>-->
             <div class="row captioned_videos">
                 <div class="col-md-12">
                     <p>
@@ -531,17 +481,17 @@
             </div>
         </div>-->
 
-
-        <div class="col-sm-4 my-auto center" style="margin-left:auto; margin-right: auto;">
-            <a href="gallery_fet1.html" class="btn btn-primary btn-lg btn-search">
-                More Results 1/2
-            </a>
-        </div>
-        <br>
-        <div class="col-sm-4 my-auto center" style="margin-left:auto; margin-right: auto;">
-            <a href="gallery_fet2.html" class="btn btn-primary btn-lg btn-search">
-                More Results 2/2
-            </a>
+        <div class="row" style="margin-bottom: 0px;">
+            <div class="col-sm-4 my-auto center" style="margin-left:auto; margin-right: auto;">
+                <a href="gallery_fet1.html" class="btn btn-primary btn-lg btn-search">
+                    More Results 1/2
+                </a>
+            </div>
+            <div class="col-sm-4 my-auto center" style="margin-left:auto; margin-right: auto;">
+                <a href="gallery_fet2.html" class="btn btn-primary btn-lg btn-search">
+                    More Results 2/2
+                </a>
+            </div>
         </div>
 
         <div class="row captioned_videos">
@@ -769,17 +719,17 @@
             </div>
         </div>-->
 
-
-        <div class="col-sm-4 my-auto center" style="margin-left:auto; margin-right: auto;">
-            <a href="gallery_layer1.html" class="btn btn-primary btn-lg btn-search">
-                More Results 1/2
-            </a>
-        </div>
-        <br>
-        <div class="col-sm-4 my-auto center" style="margin-left:auto; margin-right: auto;">
-            <a href="gallery_layer2.html" class="btn btn-primary btn-lg btn-search">
-                More Results 2/2
-            </a>
+        <div class="row" style="margin-bottom: 0px;">
+            <div class="col-sm-4 my-auto center" style="margin-left:auto; margin-right: auto;">
+                <a href="gallery_layer1.html" class="btn btn-primary btn-lg btn-search">
+                    More Results 1/2
+                </a>
+            </div>
+            <div class="col-sm-4 my-auto center" style="margin-left:auto; margin-right: auto;">
+                <a href="gallery_layer2.html" class="btn btn-primary btn-lg btn-search">
+                    More Results 2/2
+                </a>
+            </div>
         </div>
     </div>
 
@@ -859,13 +809,19 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-4 my-auto center" style="margin-left:auto; margin-right: auto;">
-            <a href="gallery_timestep.html" class="btn btn-primary btn-lg btn-search">
-                More Results
-            </a>
+        <div class="row" style="margin-bottom: 0px;">
+            <div class="col-sm-4 my-auto center" style="margin-left:auto; margin-right: auto;">
+                <a href="gallery_timestep.html" class="btn btn-primary btn-lg btn-search">
+                    More Results 1/2
+                </a>
+            </div>
+            <div class="col-sm-4 my-auto center" style="margin-left:auto; margin-right: auto;">
+                <a href="gallery_timestep2.html" class="btn btn-primary btn-lg btn-search">
+                    More Results 2/2
+                </a>
+            </div>
         </div>
     </div>
-
     <hr class="divider" /><br>
     <div class="container" style="max-width: 768px;">
         <footer>
@@ -881,5 +837,4 @@
         );
     </script>
 </body>
-
 </html>
